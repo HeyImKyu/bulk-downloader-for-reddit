@@ -13,7 +13,6 @@ from bdfr.site_downloaders.erome import Erome
 from bdfr.site_downloaders.fallback_downloaders.ytdlp_fallback import YtdlpFallback
 from bdfr.site_downloaders.flickr import Flickr
 from bdfr.site_downloaders.gallery import Gallery
-from bdfr.site_downloaders.gfycat import Gfycat
 from bdfr.site_downloaders.imgchest import Imgchest
 from bdfr.site_downloaders.imgur import Imgur
 from bdfr.site_downloaders.pornhub import PornHub
@@ -32,8 +31,6 @@ class DownloadFactory:
             return Imgur
         elif re.match(r"(i\.|thumbs\d{1,2}\.|v\d\.)?(redgifs|gifdeliverynetwork)", sanitised_url):
             return Redgifs
-        elif re.match(r"(thumbs\.|giant\.)?gfycat\.", sanitised_url):
-            return Gfycat
         elif re.match(r".*/.*\.[a-zA-Z34]{3,4}(\?[\w;&=]*)?$", sanitised_url) and not DownloadFactory.is_web_resource(
             sanitised_url
         ):
