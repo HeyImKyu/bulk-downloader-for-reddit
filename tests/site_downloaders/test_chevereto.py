@@ -13,38 +13,6 @@ from bdfr.site_downloaders.chevereto import Chevereto
         (
             "https://nsfw.pics/album/Test.l2t",  # Album
             {
-                "https://nsfw.pics/image/OdfV",
-                "https://nsfw.pics/image/ObUF",
-                "https://nsfw.pics/image/OOV7",
-                "https://nsfw.pics/image/OD71",
-                "https://nsfw.pics/image/O6du",
-            },
-        ),
-        (
-            "https://lensdump.com/a/Vb411",  # Album
-            {
-                "https://lensdump.com/i/CDIUci",
-                "https://lensdump.com/i/CDIXZo",
-                "https://lensdump.com/i/CDIwD2",
-                "https://lensdump.com/i/CDI5VC",
-                "https://lensdump.com/i/CDIGn5",
-            },
-        ),
-    ),
-)
-def test_get_album(test_url: str, expected: set[str]):
-    results = Chevereto._get_album_links(test_url)
-    assert len(results) == len(expected)
-    assert sorted(results) == sorted(expected)
-
-
-@pytest.mark.online
-@pytest.mark.parametrize(
-    ("test_url", "expected"),
-    (
-        (
-            "https://nsfw.pics/album/Test.l2t",  # Album
-            {
                 "https://i.nsfw.pics/b8007b506022132fe857eead3dc98a92.gif",
                 "https://i.nsfw.pics/aa0541830d5d16743bca9bfb48e16b7b.gif",
                 "https://i.nsfw.pics/b4afb5a33e68d3d74a547f62684cddc9.jpeg",
@@ -69,6 +37,16 @@ def test_get_album(test_url: str, expected: set[str]):
         (
             "https://lensdump.com/i/CDIUci",  # Single image
             {"https://i3.lensdump.com/i/CDIUci.gif?open=true"},
+        ),
+        (
+            "https://lensdump.com/a/Vb411",  # Album
+            {
+                "https://lensdump.com/i/CDIUci",
+                "https://lensdump.com/i/CDIXZo",
+                "https://lensdump.com/i/CDIwD2",
+                "https://lensdump.com/i/CDI5VC",
+                "https://lensdump.com/i/CDIGn5",
+            },
         ),
     ),
 )
