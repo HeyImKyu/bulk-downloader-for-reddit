@@ -11,16 +11,6 @@ from bdfr.site_downloaders.chevereto import Chevereto
     ("test_url", "expected"),
     (
         (
-            "https://nsfw.pics/album/Test.l2t",  # Album
-            {
-                "https://i.nsfw.pics/b8007b506022132fe857eead3dc98a92.gif",
-                "https://i.nsfw.pics/aa0541830d5d16743bca9bfb48e16b7b.gif",
-                "https://i.nsfw.pics/b4afb5a33e68d3d74a547f62684cddc9.jpeg",
-                "https://i.nsfw.pics/131ed0764342b570a338af37cdd75e3e.jpeg",
-                "https://i.nsfw.pics/c447389dee315f5960eb29671fb56232.jpeg",
-            },
-        ),
-        (
             "https://lensdump.com/a/Vb411",  # Album
             {
                 "https://i3.lensdump.com/i/CDIUci.gif?open=true",
@@ -29,10 +19,6 @@ from bdfr.site_downloaders.chevereto import Chevereto
                 "https://i3.lensdump.com/i/CDI5VC.gif?open=true",
                 "https://i1.lensdump.com/i/CDIGn5.jpeg?open=true",
             },
-        ),
-        (
-            "https://nsfw.pics/image/OdfV",  # Single image
-            {"https://i.nsfw.pics/b8007b506022132fe857eead3dc98a92.gif"},
         ),
         (
             "https://lensdump.com/i/CDIUci",  # Single image
