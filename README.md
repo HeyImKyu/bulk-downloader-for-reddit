@@ -1,3 +1,15 @@
+# bdfr-kyu
+### This is an edited bdfr version to include praw version 7.7.1 as newer versions break bdfr.
+
+To install, please run:
+```bash
+python -m pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple bdfr-kyu
+```
+
+Please see [Bulk Downloader for Reddit](https://github.com/Serene-Arc/bulk-downloader-for-reddit) for the original author.
+
+## Original README:
+
 # Bulk Downloader for Reddit
 
 [![PyPI Status](https://img.shields.io/pypi/status/bdfr?logo=PyPI)](https://pypi.python.org/pypi/bdfr)
